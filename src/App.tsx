@@ -1,3 +1,5 @@
+import { Layout } from '@/layout/layout'
+
 export function App() {
-  return <div>Hello</div>
+  return <Layout />
 }

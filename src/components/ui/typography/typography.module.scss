@@ -1,0 +1,37 @@
+.common {
+  font-weight: var(--font-weight-medium);
+  font-style: normal;
+
+  //color: var(--color-light-100);
+  color: var(--color-dark-900);
+}
+
+.body1 {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-m);
+}
+
+.body2 {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-m);
+}
+
+.h1 {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+}
+
+.h2 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-m);
+}
+
+.h3 {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-m);
+}

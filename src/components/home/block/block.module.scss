@@ -1,0 +1,121 @@
+.root {
+  padding: 25px;
+  color: var(--color-light-100);
+}
+
+.orange {
+  background-color: var(--color-orange);
+}
+
+.green {
+  background-color: var(--color-green);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.violet {
+  background-color: var(--color-violet);
+}
+
+.offerRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 300px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+
+  //padding: 10px;
+
+  text-align: center;
+
+  //border: 1px solid red;
+}
+
+.icon {
+  position: relative;
+  color: var(--color-green);
+
+  .circle {
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    transform: translate(-70%, -55%);
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    &::before {
+      content: '';
+
+      bottom: 0;
+
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+
+      opacity: 0.3;
+      background-color: var(--color-violet);
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+
+      width: 55px;
+      height: 55px;
+
+      opacity: 0.2;
+      background: var(--color-green);
+      border-radius: 50%;
+    }
+
+    &:hover::before {
+      animation: oneBefore 0.5s forwards;
+    }
+  }
+}
+
+.circle.orangeSm {
+  &::before {
+    background-color: var(--color-orange);
+  }
+}
+
+.circle.greenSm {
+  &::before {
+    background-color: var(--color-green);
+  }
+}
+
+.circle.blueSm {
+  &::before {
+    background-color: var(--color-blue);
+  }
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.description {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+}
+
+@keyframes oneBefore {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translate(0, -50px);
+  }
+}

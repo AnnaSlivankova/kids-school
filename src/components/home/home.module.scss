@@ -1,0 +1,19 @@
+.image-container {
+  overflow: hidden; /* чтобы изображение не выходило за границы контейнера */
+  width: 100%;
+  height: 50vh; /* 70% от высоты экрана */
+}
+
+.image {
+  z-index: 998;
+  max-width: 100%; /* чтобы изображение не превышало ширину экрана */
+  max-height: 100%; /* чтобы изображение не превышало высоту контейнера */
+  object-fit: contain; /* чтобы изображение сохраняло пропорции и заполняло максимально возможную область */
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
