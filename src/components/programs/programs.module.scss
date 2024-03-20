@@ -5,12 +5,19 @@
   flex-direction: column;
   align-items: center;
 
-  min-height: 50vh;
+  //height: 100%;
+
+  //height: 100vh;
+  min-height: 100vh;
 
   background-image: url('../../assets/imgs/doodle.jpg');
-  background-repeat: no-repeat;
+
+  //background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: center;
   background-size: cover;
+
+  //background-size: auto;
 
   &::before {
     content: '';
@@ -21,6 +28,8 @@
 
     width: 100%;
     height: 100%;
+
+    //min-height: 100vh;
 
     opacity: 0.97;
     background-color: var(--color-orange);
@@ -53,8 +62,12 @@
 }
 
 .program {
-  width: 30%;
+  width: 100%;
+  max-width: 300px;
   height: 370px;
   margin: 20px 10px;
+
   background-color: var(--color-light-100);
+  border: 1px black solid;
+  border-radius: 10px 10px 0 0;
 }

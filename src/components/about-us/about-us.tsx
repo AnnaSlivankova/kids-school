@@ -5,7 +5,7 @@ import s from './about-us.module.scss'
 
 export const AboutUs = () => {
   return (
-    <section className={s.root} id={'about-us'}>
+    <section className={s.root} id={'about-us'} style={{ marginTop: '30px' }}>
       <div className={s.container}>
         <div className={s.titleHeader}>
           <Typography as={'h2'} variant={'h2'}>
