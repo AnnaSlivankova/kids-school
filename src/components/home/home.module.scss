@@ -1,19 +1,84 @@
-.image-container {
-  overflow: hidden; /* чтобы изображение не выходило за границы контейнера */
-  width: 100%;
-  height: 50vh; /* 70% от высоты экрана */
-}
-
-.image {
-  z-index: 998;
-  max-width: 100%; /* чтобы изображение не превышало ширину экрана */
-  max-height: 100%; /* чтобы изображение не превышало высоту контейнера */
-  object-fit: contain; /* чтобы изображение сохраняло пропорции и заполняло максимально возможную область */
-}
-
 .root {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  margin-top: 96px;
+
+  @media screen and (width <= 767px) {
+    margin-top: 30px;
+  }
+}
+
+.titleBlock {
+  position: absolute;
+  z-index: 999;
+  top: 56%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+
+  color: var(--color-dark-900);
+
+  @media screen and (width <= 767px) {
+    top: 30%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.titleMain {
+  display: block;
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+
+  @media screen and (width <= 767px) {
+    min-width: 300px;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+  }
+}
+
+.titleSecondary {
+  display: block;
+  margin-top: 24px;
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-thin);
+
+  @media screen and (width <= 767px) {
+    margin-top: 10px;
+    font-size: var(--font-size-xl);
+    text-align: center;
+  }
+}
+
+.btn {
+  margin-top: 20px;
+
+  @media screen and (width <= 767px) {
+    width: 70%;
+  }
+}
+
+.image-container {
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+}
+
+.image {
+  z-index: 998;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  @media screen and (width <= 767px) {
+    overflow: auto;
+    height: 70vh;
+    object-fit: cover;
+  }
 }

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 import { Block, OfferBlock } from '@/components/home/block'
+import { Typography } from '@/components/ui/typography'
 import {
   Baby,
   BadgeCheck,
@@ -50,37 +51,14 @@ export const Home = () => {
   return (
     <div className={s.root} id={'home'}>
       <div className={s.imageContainer} style={{ position: 'relative' }}>
-        <div
-          style={{
-            color: 'var(--color-dark-900)',
-            left: '30%',
-            position: 'absolute',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            zIndex: 999,
-          }}
-        >
-          <span
-            style={{
-              display: 'block',
-
-              fontSize: '2rem',
-              fontWeight: 'var(--font-weight-bold)',
-              padding: '5px',
-            }}
-          >
+        <div className={s.titleBlock}>
+          <Typography as={'h1'} className={s.titleMain}>
             Идеальный учебный центр
-          </span>
-          <span
-            style={{
-              display: 'block',
-              fontSize: '2rem',
-              fontWeight: 'var(--font-weight-regular)',
-              padding: '5px',
-            }}
-          >
+          </Typography>
+          <Typography as={'span'} className={s.titleSecondary}>
             для ваших детей
-          </span>
+          </Typography>
+          <button className={s.btn}>Learn more</button>
         </div>
         <img alt={'pictures'} className={s.image} src={pic} />
       </div>
@@ -116,7 +94,6 @@ export const Home = () => {
       >
         <div
           style={{
-            border: '1px solid red',
             marginTop: '20px',
             maxWidth: '740px',
             textAlign: 'center',

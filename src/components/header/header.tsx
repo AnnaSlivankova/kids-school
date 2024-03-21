@@ -1,10 +1,12 @@
+import { useState } from 'react'
 import { Link } from 'react-scroll'
 
+import { SideBar } from '@/components/ui/side-bar'
 import { Typography } from '@/components/ui/typography'
 
 import s from './header.module.scss'
 
-const navbarData: NavbarData[] = [
+export const navbarData: NavbarData[] = [
   { path: 'home', title: 'Главная' },
   { path: 'about-us', title: 'О нас' },
   { path: 'programs', title: 'Программы' },
@@ -15,6 +17,7 @@ const navbarData: NavbarData[] = [
 
 export const Header = () => {
   const handleSetActive = () => {}
+  const [open, setOpen] = useState(false)
 
   return (
     <header className={s.root}>
@@ -38,6 +41,10 @@ export const Header = () => {
             </li>
           ))}
         </Typography>
+        <button className={s.burgerBtn} onClick={() => setOpen(!open)}>
+          menu
+        </button>
+        {open && <SideBar handleClose={() => setOpen(!open)} isOpen={open} />}
       </div>
     </header>
   )
